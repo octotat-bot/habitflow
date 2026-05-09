@@ -86,6 +86,11 @@ app.get('/api/health', (req, res) =>
   res.json({ status: 'ok', timestamp: new Date(), env: process.env.NODE_ENV })
 );
 
+// ── Root route ────────────────────────────────────────────
+app.get('/', (req, res) =>
+  res.send('HabitFlow API is running successfully.')
+);
+
 // ── 404 handler ───────────────────────────────────────────
 app.use('/api/*', (req, res) =>
   res.status(404).json({ error: `Route ${req.method} ${req.path} not found` })
