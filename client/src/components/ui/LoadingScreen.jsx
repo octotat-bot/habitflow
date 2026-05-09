@@ -70,7 +70,7 @@ export default function LoadingScreen({ isVisible, progress: externalProgress })
           exit={{ opacity: 0, transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] } }}
           style={{
             position: 'fixed', inset: 0, zIndex: 99999,
-            background: '#0C0B09',
+            background: 'var(--bg-base)',
             display: 'flex', flexDirection: 'column',
             alignItems: 'center', justifyContent: 'center',
             userSelect: 'none',
@@ -79,7 +79,7 @@ export default function LoadingScreen({ isVisible, progress: externalProgress })
           {/* Subtle dot grid */}
           <div style={{
             position: 'absolute', inset: 0,
-            backgroundImage: 'radial-gradient(circle, #1e1d1a 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(circle, var(--border-mid) 1px, transparent 1px)',
             backgroundSize: '28px 28px',
             opacity: 0.5,
           }} />
@@ -138,7 +138,7 @@ export default function LoadingScreen({ isVisible, progress: externalProgress })
               transition={{ delay: 0.25, duration: 0.4 }}
               style={{
                 fontFamily: '"Syne", sans-serif',
-                fontWeight: 800, fontSize: 30, color: '#F5F4EF',
+                fontWeight: 800, fontSize: 30, color: 'var(--text-primary)',
                 letterSpacing: '-0.03em', marginBottom: 6,
                 lineHeight: 1,
               }}
@@ -153,7 +153,7 @@ export default function LoadingScreen({ isVisible, progress: externalProgress })
               transition={{ delay: 0.4 }}
               style={{
                 fontFamily: '"JetBrains Mono", monospace',
-                fontSize: 9, color: '#3D3C39',
+                fontSize: 9, color: 'var(--text-secondary)',
                 letterSpacing: '0.2em', textTransform: 'uppercase',
                 marginBottom: 52,
               }}
@@ -171,7 +171,7 @@ export default function LoadingScreen({ isVisible, progress: externalProgress })
               {/* Track */}
               <div style={{
                 width: '100%', height: 2,
-                background: '#1A1917',
+                background: 'var(--border-subtle)',
                 borderRadius: 99, overflow: 'hidden',
               }}>
                 <motion.div
@@ -196,7 +196,7 @@ export default function LoadingScreen({ isVisible, progress: externalProgress })
                   transition={{ duration: 0.2 }}
                   style={{
                     fontFamily: '"DM Sans", sans-serif',
-                    fontSize: 12, color: '#3A3936',
+                    fontSize: 12, color: 'var(--text-secondary)',
                     letterSpacing: '0.02em',
                   }}
                 >
