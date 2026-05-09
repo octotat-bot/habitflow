@@ -1,0 +1,47 @@
+# ── Dependencies ──────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ── Build outputs ─────────────────────────────────────────
+client/dist/
+client/build/
+server/dist/
+
+# ── Environment variables (NEVER commit these) ────────────
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+server/.env
+client/.env
+client/.env.local
+client/.env.production
+
+# ── Logs ──────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ── OS / Editor ───────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*.orig
+
+# ── Testing ───────────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ── Misc ──────────────────────────────────────────────────
+*.tsbuildinfo
+.cache/
+tmp/

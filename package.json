@@ -1,0 +1,13 @@
+{
+  "name": "habitflow",
+  "version": "1.0.0",
+  "description": "HabitFlow — A next-generation habit tracker",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "install:all": "npm i && npm i --prefix server && npm i --prefix client",
+    "seed": "node server/seed/achievements.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
