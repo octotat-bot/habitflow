@@ -203,23 +203,6 @@ export default function Profile() {
         <div style={{ padding: 28, background: 'var(--bg-surface)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-xl)' }}>
           <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', letterSpacing: '0.1em', marginBottom: 20 }}>SETTINGS</div>
 
-          {/* Theme */}
-          <SettingRow label="App Theme">
-            <div style={{ display: 'flex', gap: 10 }}>
-              {[{ key: 'obsidian', label: '◼ Obsidian', dark: true }, { key: 'ivory', label: '◻ Ivory', dark: false }].map(t => (
-                <button
-                  key={t.key}
-                  onClick={() => toggleTheme(t.key)}
-                  style={{ padding: '8px 16px', borderRadius: 'var(--radius-md)', border: `1px solid ${theme === t.key ? 'var(--accent)' : 'var(--border-subtle)'}`, background: theme === t.key ? 'var(--accent-glow)' : 'transparent', color: theme === t.key ? 'var(--accent)' : 'var(--text-secondary)', fontSize: 13, fontFamily: 'var(--font-body)', cursor: 'none' }}
-                >
-                  {t.label}
-                </button>
-              ))}
-            </div>
-          </SettingRow>
-
-          <div style={{ height: 1, background: 'var(--border-subtle)', margin: '16px 0' }} />
-
           <SettingRow label="Export Data">
             <button onClick={handleExport} style={{ padding: '8px 16px', background: 'transparent', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', color: 'var(--text-secondary)', fontSize: 13, fontFamily: 'var(--font-body)', cursor: 'none' }}>
               ↓ Download JSON
